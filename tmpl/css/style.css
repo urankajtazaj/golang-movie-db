@@ -1,0 +1,33 @@
+body, html {
+  font-family: sans-serif;
+}
+
+input {
+  font-size: 17px;
+  padding: 5px;
+  margin: 0px 0px 5px 0px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+
+th {
+  background-color: #fff;
+  text-align: left;
+}
+
+td {
+  border: 1px solid #ccc;
+  padding: 5px 20px 5px 5px;
+}
+
+.center {
+  text-align: center;
+  width: 900px;
+  margin: 50px auto;
+}
