@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit movie</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <div class="center">
+      <form action="/edit/updating/{{.Id}}" method="post">
+        <input type="text" name="emri" value="{{.Emri}}"><br>
+        <input type="text" name="studio" value="{{.Studio}}"><br>
+        <input type="text" name="viti" value="{{.Viti}}"><br>
+        <input type="text" name="kategoria" value="{{.Kategoria}}"><br>
+        <input type="text" name="kohezgjatja" value="{{.Kohezgjatja}}"><br>
+        <input type="text" name="vleresimi" value="{{.Vleresimi}}"><br>
+        <input type="submit" value="Save">
+      </form>
+    </div>
+  </body>
+</html>

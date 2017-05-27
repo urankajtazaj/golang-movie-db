@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+
+  <body>
+
+<div class="center">
+    <h1>IMDB</h1>
+    <table>
+      <thead>
+        <th>Emri</th>
+        <th>Studio</th>
+        <th>Kategoria</th>
+        <th>Viti</th>
+        <th>Kohezgjatja</th>
+        <th>Vleresimi</th>
+      </thead>
+      <tbody>
+        {{range .}}
+          <tr>
+            <td>{{.Emri}}</td>
+            <td>{{.Studio}}</td>
+            <td>{{.Kategoria}}</td>
+            <td>{{.Viti}}</td>
+            <td>{{.Kohezgjatja}}</td>
+            <td>{{.Vleresimi}}</td>
+            <td><a href="edit/{{.Id}}">Rregullo</a></td>
+            <td><a href="delete/{{.Id}}">Fshi</a></td>
+          </tr>
+        {{end}}
+      </tbody>
+    </table>
+    <form action="/add/" method="post">
+      <br>
+      <input type="submit" value="Shto"/>
+    </form>
+  </div>
+  </body>
+</html>
