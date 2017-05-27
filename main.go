@@ -24,7 +24,7 @@ var db, _ = sql.Open("mysql", "root:urankajtazaj@/testdb")
 
 var t = template.Must(template.ParseGlob("tmpl/*.html"))
 
-func getData(w http.ResponseWriter) {
+func handleRoot(w http.ResponseWriter, r *http.Request) {
 	rs, _ := db.Query("select * from filmat")
 
 	var fslice = make([]Filmi, 0)
@@ -34,10 +34,6 @@ func getData(w http.ResponseWriter) {
 		fslice = append(fslice, flm)
 	}
 	t.ExecuteTemplate(w, "index.html", fslice)
-}
-
-func handleRoot(w http.ResponseWriter, r *http.Request) {
-	getData(w)
 }
 
 func handleAdd(w http.ResponseWriter, r *http.Request) {
